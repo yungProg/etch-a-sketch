@@ -13,9 +13,17 @@ function makeGrids(numberOfColumns = 16) {
     
 }
 
+function generateRandomColor() {
+    const randomNumber1 = Math.floor(Math.random() * 256) // generate random number between 0 - 255
+    const randomNumber2 = Math.floor(Math.random() * 256) // generate random number between 0 - 255
+    const randomNumber3 = Math.floor(Math.random() * 256) // generate random number between 0 - 255
+    const randomColor = `rgb(${randomNumber1}, ${randomNumber2}, ${randomNumber3})`
+    return randomColor
+}
+
 container.addEventListener("mouseover", (event) => {
     target = event.target;
-    target.style.backgroundColor = "red"
+    target.style.backgroundColor = generateRandomColor()
 })
 
 container.addEventListener("mouseout", (event) => {
