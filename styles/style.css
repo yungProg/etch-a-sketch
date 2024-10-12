@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.create-new-sheet-btn {
+    font-size: 1.2rem;
+    padding: 12px 16px;
+    background-color: #227722;
+    color: #ffffff;
+    margin: 4vh;
+}
+
+.container {
+    width: 960px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.container::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    border: 2px solid black;
+    z-index: -1;
+}
+
+.grid {
+    flex-grow: 0;
+    flex-shrink: 0;
+    aspect-ratio: 1 / 1;
+    border: 1px solid #a8a8a8;
+}
